@@ -1,109 +1,172 @@
 # Rules-Agents 🤖
 
-Conjunto de reglas y mejores prácticas genéricas para desarrollo backend con Amazon Q Developer y otros asistentes de IA.
+Conjunto de reglas y mejores prácticas organizadas por lenguajes de programación para asistentes de IA como Amazon Q Developer.
 
 ## 📋 Descripción
 
-Este repositorio contiene reglas estandarizadas y reutilizables para proyectos backend Node.js/Express, diseñadas para ser utilizadas con asistentes de IA como Amazon Q Developer.
+Este repositorio contiene reglas estandarizadas y reutilizables organizadas por lenguajes de programación, diseñadas para ser utilizadas con asistentes de IA en el desarrollo de software.
 
-## 🏗️ Estructura
+## 🏗️ Estructura por Lenguajes
 
 ```
-.amazonq/rules/backend/
-├── api-design-generic.md      # Diseño de APIs RESTful
-├── architecture-generic.md    # Patrones de arquitectura
-├── changelog-generic.md       # Gestión de changelog
-├── database-generic.md        # Patrones de base de datos
-├── testing-generic.md         # Estrategias de testing
-├── security-generic.md        # Seguridad y protección
-├── performance-generic.md     # Optimización de rendimiento
-├── monitoring-generic.md      # Observabilidad y monitoreo
-└── idioma-generic.md         # Reglas de idioma
+.amazonq/rules/
+├── javascript/           # Node.js, Express, React
+│   ├── api-design-generic.md
+│   ├── architecture-generic.md
+│   ├── testing-generic.md
+│   └── ...
+├── python/              # Django, Flask, FastAPI
+│   ├── django-patterns.md
+│   ├── flask-best-practices.md
+│   └── ...
+├── java/                # Spring Boot, Maven
+│   ├── spring-patterns.md
+│   ├── maven-structure.md
+│   └── ...
+├── csharp/              # .NET, ASP.NET Core
+│   ├── dotnet-patterns.md
+│   ├── entity-framework.md
+│   └── ...
+├── go/                  # Gin, Echo, Fiber
+│   ├── go-patterns.md
+│   ├── gin-structure.md
+│   └── ...
+├── php/                 # Laravel, Symfony
+│   ├── laravel-patterns.md
+│   ├── php-standards.md
+│   └── ...
+└── typescript/          # Angular, NestJS
+    ├── nestjs-patterns.md
+    ├── angular-structure.md
+    └── ...
 ```
 
-## 🎯 Características
+## 🎯 Lenguajes Soportados
 
-### **Reglas de API Design**
-- Códigos de estado HTTP estándar
-- Formatos de respuesta consistentes
-- Paginación y filtrado
-- Versionado de APIs
+### **JavaScript/Node.js** 🟨
+- **Frameworks**: Express.js, Fastify, Koa
+- **Frontend**: React, Vue, Vanilla JS
+- **Testing**: Jest, Vitest, Cypress
+- **Herramientas**: ESLint, Prettier, Webpack
 
-### **Arquitectura Backend**
-- Patrón Controller-Service
-- ES Modules obligatorio
-- Manejo de errores centralizado
-- Timestamps en snake_case
+### **Python** 🐍
+- **Frameworks**: Django, Flask, FastAPI
+- **Testing**: pytest, unittest
+- **Herramientas**: Black, flake8, mypy
+- **Bases de datos**: SQLAlchemy, Django ORM
 
-### **Base de Datos**
-- Patrones Sequelize optimizados
-- Migraciones numeradas secuencialmente
-- Soft delete por defecto
-- Índices para performance
+### **Java** ☕
+- **Frameworks**: Spring Boot, Quarkus
+- **Testing**: JUnit, TestNG, Mockito
+- **Herramientas**: Maven, Gradle
+- **Bases de datos**: JPA, Hibernate
 
-### **Testing**
-- Pirámide de testing (70% unit, 20% integration, 10% e2e)
-- Coverage mínimo 80%
-- Security testing integrado
+### **C#** 🔷
+- **Frameworks**: ASP.NET Core, .NET
+- **Testing**: xUnit, NUnit, MSTest
+- **Herramientas**: NuGet, Entity Framework
+- **Patrones**: CQRS, Repository
 
-### **Seguridad**
-- Headers de seguridad obligatorios
-- Sanitización automática de inputs
-- Prevención de SQL injection
-- Encriptación de datos sensibles
+### **Go** 🐹
+- **Frameworks**: Gin, Echo, Fiber
+- **Testing**: testing package, Testify
+- **Herramientas**: go mod, gofmt
+- **Bases de datos**: GORM, sqlx
 
-### **Performance**
-- Optimización de queries con Promise.all
-- Caching con Redis
-- Memory management
-- Stream processing
+### **PHP** 🐘
+- **Frameworks**: Laravel, Symfony, CodeIgniter
+- **Testing**: PHPUnit, Pest
+- **Herramientas**: Composer, PHP-CS-Fixer
+- **Bases de datos**: Eloquent, Doctrine
 
-### **Monitoreo**
-- Logging estructurado
-- Métricas en tiempo real
-- Sistema de alertas
-- Dashboard de observabilidad
+### **TypeScript** 🔷
+- **Frameworks**: NestJS, Angular, Next.js
+- **Testing**: Jest, Vitest
+- **Herramientas**: TSC, ESLint
+- **Patrones**: Decorators, Dependency Injection
 
-## 🚀 Uso
+## 🚀 Uso por Lenguaje
 
-1. **Copia las reglas** a tu proyecto en `.amazonq/rules/`
-2. **Personaliza** según las necesidades específicas
-3. **Configura** tu asistente de IA para usar estas reglas
-4. **Desarrolla** siguiendo los patrones establecidos
+### **Para JavaScript/Node.js:**
+```bash
+# Copiar reglas específicas
+cp .amazonq/rules/javascript/* tu-proyecto/.amazonq/rules/
+```
 
-## 📝 Idioma
+### **Para Python:**
+```bash
+# Copiar reglas específicas
+cp .amazonq/rules/python/* tu-proyecto/.amazonq/rules/
+```
 
-- **Código**: Inglés (estándar internacional)
-- **Comentarios**: Español
-- **Documentación**: Español
-- **Mensajes de error API**: Inglés
-- **Validaciones UI**: Español
+### **Para cualquier lenguaje:**
+1. **Navega** a la carpeta del lenguaje
+2. **Copia** las reglas relevantes
+3. **Personaliza** según tu proyecto
+4. **Configura** tu asistente de IA
 
-## 🔧 Tecnologías Soportadas
+## 📋 Reglas Comunes por Lenguaje
 
-- **Backend**: Node.js, Express.js
-- **Base de Datos**: PostgreSQL, Sequelize ORM
-- **Testing**: Vitest, Jest, Supertest
-- **Caching**: Redis
-- **Logging**: Winston
-- **Seguridad**: Helmet, bcrypt, JWT
+### **Todas incluyen:**
+- ✅ **Arquitectura** - Patrones y estructura
+- ✅ **API Design** - RESTful, GraphQL
+- ✅ **Testing** - Unit, Integration, E2E
+- ✅ **Security** - Autenticación, autorización
+- ✅ **Performance** - Optimización, caching
+- ✅ **Monitoring** - Logs, métricas, alertas
+- ✅ **Database** - ORM, migraciones, queries
+- ✅ **Deployment** - CI/CD, containerización
 
-## 📖 Mejores Prácticas Incluidas
+## 🔧 Frameworks Específicos
 
-- ✅ Desarrollo ágil con force sync
-- ✅ Seeders obligatorios en desarrollo
-- ✅ Changelog automático
-- ✅ Response formatters centralizados
-- ✅ Validación de entrada robusta
-- ✅ Rate limiting configurado
-- ✅ Health checks implementados
+### **JavaScript Ecosystem:**
+- **Express.js** - API REST tradicional
+- **Fastify** - High performance APIs
+- **NestJS** - Enterprise applications
+- **React** - Frontend applications
+
+### **Python Ecosystem:**
+- **Django** - Full-stack framework
+- **Flask** - Microframeworks
+- **FastAPI** - Modern async APIs
+- **SQLAlchemy** - Database toolkit
+
+### **Java Ecosystem:**
+- **Spring Boot** - Enterprise applications
+- **Quarkus** - Cloud-native apps
+- **Maven/Gradle** - Build tools
+- **JPA/Hibernate** - ORM solutions
+
+## 📖 Beneficios por Lenguaje
+
+### **Específico y Relevante**
+- Reglas adaptadas a cada ecosistema
+- Patrones nativos del lenguaje
+- Herramientas específicas
+
+### **Mejores Prácticas**
+- Convenciones de la comunidad
+- Performance optimizations
+- Security patterns específicos
+
+### **Ecosistema Completo**
+- Frameworks populares
+- Testing tools
+- Deployment strategies
 
 ## 🤝 Contribución
 
+### **Agregar nuevo lenguaje:**
+1. Crear carpeta en `.amazonq/rules/[lenguaje]/`
+2. Seguir estructura estándar
+3. Incluir reglas básicas
+4. Actualizar README
+
+### **Mejorar lenguaje existente:**
 1. Fork el repositorio
-2. Crea una rama para tu feature
-3. Actualiza el CHANGELOG.md
-4. Envía un Pull Request
+2. Editar reglas específicas
+3. Actualizar CHANGELOG
+4. Enviar Pull Request
 
 ## 📄 Licencia
 
@@ -111,4 +174,4 @@ MIT License - Libre para uso comercial y personal.
 
 ---
 
-**Desarrollado para optimizar el trabajo con asistentes de IA en proyectos backend enterprise-ready.**
+**Reglas optimizadas por lenguaje para desarrollo con asistentes de IA.**
