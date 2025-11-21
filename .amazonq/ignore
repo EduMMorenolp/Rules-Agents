@@ -1,0 +1,33 @@
+# Amazon Q Ignore File
+# Ignorar issues en archivos de datos de prueba y documentación
+
+# Seeders - Datos de prueba con credenciales hardcodeadas (seguro)
+src/database/seeders/
+src/database/seeders/*.cjs
+
+# Tests - Credenciales de testing (seguro)
+tests/
+tests/**/*.test.js
+tests/**/*.js
+
+# Documentación - Referencias de ejemplo (seguro)
+documentacion/
+documentacion/*.md
+documentacion/**/*.md
+
+# Scripts - Utilidades de desarrollo (seguro)
+scripts/
+scripts/*.js
+
+# Archivos de configuración con ejemplos
+.env.example
+APIA_Postman.json
+
+# Archivos específicos con issues conocidos
+src/database/config.cjs
+src/app/middlewares/uploadToS3.js
+
+# Patrones específicos para ignorar
+**/*demo*.cjs
+**/*test*.js
+**/*example*.js
